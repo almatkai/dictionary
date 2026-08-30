@@ -1,0 +1,96 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "dictionary",
+  "title": "Web Dictionaries",
+  "description": "Search any word with multiple online dictionaries or translation engines in one place—lightweight, zero dependencies.",
+  "icon": "icon.png",
+  "author": "almatkai",
+  "categories": [
+    "Productivity",
+    "Data",
+    "Web"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "fromCmd",
+      "title": "Search in Dictionaries",
+      "description": "Search any word with multiple online dictionaries.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    },
+    {
+      "name": "fromSelected",
+      "title": "Search From Cursor Selection",
+      "description": "Search your current cursor-selected words.",
+      "mode": "view",
+      "platforms": [
+        "macOS",
+        "Windows"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "googlapiKey",
+      "type": "password",
+      "required": false,
+      "description": "The API key to use the Google Translation API",
+      "title": "Google API key"
+    },
+    {
+      "name": "youdaoapiKey",
+      "type": "password",
+      "required": false,
+      "description": "The client secret to use the Youdao API",
+      "title": "Youdao Secret Key"
+    },
+    {
+      "name": "youdaoapiClientId",
+      "type": "textfield",
+      "required": false,
+      "description": "The client ID to use the Youdao API",
+      "title": "Youdao Client ID"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.104.1",
+    "@raycast/utils": "^2.2.2",
+    "cross-fetch": "^3.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "id": "com.tezbar.dictionary",
+  "platforms": [
+    "macOS",
+    "Windows"
+  ],
+  "version": "0.1.0",
+  "tezbar": {
+    "schemaVersion": 1,
+    "platforms": [
+      "macos",
+      "windows"
+    ],
+    "linuxStatus": "coming-soon",
+    "repository": "https://github.com/almatkai/dictionary",
+    "upstream": {
+      "repository": "https://github.com/raycast/extensions",
+      "path": "extensions/dictionary",
+      "commit": "6734d85992290066fd31a7f5bee3cca3d3545a1a"
+    }
+  }
+}
