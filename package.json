@@ -3,7 +3,7 @@
   "name": "dictionary",
   "title": "Web Dictionaries",
   "description": "Search any word with multiple online dictionaries or translation engines in one place—lightweight, zero dependencies.",
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "author": "almatkai",
   "categories": [
     "Productivity",
